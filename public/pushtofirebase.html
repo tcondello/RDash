@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+</head>
+
+<body>
+
+  <div>
+    <label for="wName">Website Name:</label>
+    <input type="text" name="wName" id="wName">
+    <label for="wURL">Feed URL:</label>
+    <input type="text" name="wURL" id="wURL">
+    <input type="button" name="name" value="submit" onclick="sendin()">
+
+  </div>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-aria/angular-aria.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.js"></script>
+  <script src="node_modules/angular-material/angular-material.js"></script>
+  <script type="text/javascript">
+  var ref = new Firebase("https://raudhskinna.firebaseio.com/feedArray/");
+  function sendin() {
+    var name = document.getElementById("wName").value.replace(/ |\./g, "_");
+    var site = document.getElementById("wURL").value;
+    ref.child(name).set(site, onComplete);
+  }
+    var onComplete = function(error) {
+      if (error) {
+        console.log('Synchronization failed');
+      } else {
+        console.log('Synchronization succeeded');
+      }
+    };
+
+  </script>
+
+</body>
+
+</html>

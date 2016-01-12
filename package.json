@@ -1,0 +1,35 @@
+{
+  "name": "Rdash",
+  "version": "0.0.0",
+  "description": "Rdash",
+  "main": "server.js",
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tcondello/Rdash"
+  },
+  "author": "Tim C",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcondello/Rdash/issues"
+  },
+  "homepage": "https://github.com/tcondello/Rdash",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^1.0.1",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "firebase": "^2.3.2",
+    "google-feed-api": "0.0.2",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "budo": "^7.1.0",
+    "watchify": "^3.7.0"
+  }
+}
